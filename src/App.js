@@ -1,25 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css"; // Import the CSS file
+import ThemeToggleButton from "./ThemeToggleButton"; // Ensure this path is correct
+import { useAppTheme } from "./AppThemeContext"; // Ensure this path is correct
 
-function App() {
+const App = () => {
+  const { theme } = useAppTheme();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={theme}>
+      <h1>Hello, Theme Switcher!</h1>
+      <ThemeToggleButton />
     </div>
   );
-}
+};
 
-export default App;
+export default App; // Ensure there's a default export
