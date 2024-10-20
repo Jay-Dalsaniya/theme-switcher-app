@@ -1,13 +1,13 @@
-# React Custom Hook with Advanced CSS
+# Theme Switcher App with LocalStorage and Advanced CSS
 
-This project demonstrates how to create a custom hook for managing `localStorage` in React and apply advanced CSS styling to enhance the user interface. The project uses `useLocalStorage` to persist the state in `localStorage` and implements smooth animations, transitions, and a responsive design using modern CSS techniques.
+This project demonstrates how to create a theme switcher in React using `localStorage` for persisting the selected theme and applying advanced CSS for smooth transitions between light and dark modes. The app features a custom hook, `useLocalStorage`, to store the theme preference, and uses modern CSS techniques like Flexbox for layout and transitions for UI effects.
 
 ## Features
 
+- Toggle between light and dark themes.
 - Custom React hook for managing `localStorage`.
 - Advanced CSS with gradient backgrounds, hover effects, and button animations.
-- Responsive, modern design using Flexbox.
-- Example usage of the `useLocalStorage` hook to store and retrieve user names.
+- Responsive design using Flexbox.
 
 ## Technologies Used
 
@@ -16,25 +16,25 @@ This project demonstrates how to create a custom hook for managing `localStorage
 
 ## Setup Instructions
 
-1. **Clone the repository**
+1. **Clone the repository**:
 
    ```bash
-   git clone https://github.com/yourusername/react-custom-hook-advanced-css.git
+   git clone https://github.com/Jay-Dalsaniya/theme-switcher-app.git
    ```
 
-2. **Navigate into the project directory**
+2. **Navigate into the project directory**:
 
    ```bash
-   cd react-custom-hook-advanced-css
+   cd theme-switcher-app
    ```
 
-3. **Install the required dependencies**
+3. **Install the required dependencies**:
 
    ```bash
    npm install
    ```
 
-4. **Start the application**
+4. **Start the application**:
 
    ```bash
    npm start
@@ -44,24 +44,29 @@ This project demonstrates how to create a custom hook for managing `localStorage
 
 ## How It Works
 
-### useLocalStorage Hook:
+### `useLocalStorage` Hook:
 
-- `useLocalStorage` retrieves the initial value from `localStorage` if available, or it sets the provided initial value.
-- The hook returns the stored value and a setter function to update both the state and `localStorage`.
+- `useLocalStorage` retrieves the initial value from `localStorage` if it exists; otherwise, it sets and stores the provided initial value.
+- The hook returns both the stored value and a setter function to update the state and `localStorage` simultaneously.
 
 ### Component Behavior:
 
-- On clicking the buttons, the name in the `localStorage` changes, and the updated value is reflected in the UI.
-- The value persists after refreshing the page as it's stored in `localStorage`.
+- The user can toggle between light and dark themes.
+- The selected theme persists after page reload as it's saved in `localStorage`.
+- The theme switcher button dynamically updates based on the current theme.
 
 ### CSS Features:
 
-- Gradient background creates a smooth transition between two colors.
-- The container is centered using Flexbox, with shadows and rounded corners to create a card-like effect.
-- Buttons have hover and click effects using CSS transitions and transform properties.
+- Smooth background transitions between light and dark themes using CSS transitions.
+- The layout is managed using Flexbox for centering the content.
+- Buttons feature hover effects and animations using CSS `transform` and `transition` properties.
 
 ## Screenshots
 
-![alt text](image.png)
+### Light Theme
+![Light Theme](image.png)
 
-![alt text](image-1.png)
+### Dark Theme
+![Dark Theme](image-1.png)
+
+This project demonstrates a practical and modern approach to implementing a theme switcher with persistence using React and `localStorage`, combined with sleek, responsive styling using advanced CSS techniques.
